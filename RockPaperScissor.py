@@ -1,11 +1,11 @@
 import random
-userChoice = input("Choices : Rock, Paper, Scissor \nPick any one :")
+userChoice = input("Choices : Rock, Paper, Scissor \nYour Choice :")
 def RandomChoice():
-    randomNumber = random.random()
-    if(randomNumber < 0.333333):
+    randomNumber = random.randint(0,2)
+    if(randomNumber == 0):
         print("Computer Choice : Rock")
         return "Rock"
-    elif(randomNumber > 0.333333 and randomNumber < 0.666666):
+    elif(randomNumber == 1):
         print("Computer Choice : Paper")
         return "Paper"
     else:
@@ -31,6 +31,4 @@ def VsComputer(userChoice) :
         print("Computer is Winner : Scissor")
     elif(ComputerChoice == 'Scissor' and userChoice == 'Rock'):
         print("You are Winner : Rock")
-    else:
-        print("Check All cases in code :")
 VsComputer(userChoice)
